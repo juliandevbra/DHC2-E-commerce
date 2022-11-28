@@ -1,41 +1,41 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: left;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  background-color: rgb(255, 255, 191);
 }
 
 .card {
   padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+.header{
+  display: flex;
+  background-color: rgb(255, 255, 52);
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.header h3{
+  color: #000;
+  text-decoration: none;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }

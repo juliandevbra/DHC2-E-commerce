@@ -5,7 +5,7 @@ import Contact from './Pages/Contact'
 import Shop from './Pages/Shop'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import Card from './Components/Card'
+import ItemDetail from './Components/ItemDetail'
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}>
             <Route path='/shop' element={<Shop data={data}/>}>
-              <Route path='/shop/:id' element={<Card data={data}/>}/>
+              <Route path='/shop/:id' element={<ItemDetail data={data}/>}/>
             </Route>
             <Route path='/contact' element={<Contact/>}/>
           </Route>

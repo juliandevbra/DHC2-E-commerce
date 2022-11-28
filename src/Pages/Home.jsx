@@ -8,7 +8,7 @@ const Home = (s) => {
   return (
     <div>
         <Header/>
-        <h2>Bienvenidos al nuestro primer E-commerce</h2>
+        <h2 className='title'>Bienvenidos al nuestro primer E-commerce</h2>
         <Outlet/>
         <Footer/>
        
