@@ -1,12 +1,13 @@
 import './App.css'
-import { Outlet, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import Contact from './Pages/Contact'
 import Shop from './Pages/Shop'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import ItemDetail from './Components/ItemDetail'
-
+import Auth from './Auth/Auth'
+import LoginForm from './Pages/LoginForm'
 function App() {
 
   const [data, setData] = useState()
@@ -20,7 +21,7 @@ function App() {
   return (
     <div className="App">
         <Routes>
-          <Route path='/' element={<Home/>}>
+          <Route path='/' element={Auth() ? <Home/> : <LoginForm/> }>
             <Route path='/shop' element={<Shop data={data}/>}>
               <Route path='/shop/:id' element={<ItemDetail data={data}/>}/>
             </Route>
